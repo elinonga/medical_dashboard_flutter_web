@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:medical_dashboard/widgets/container_links.dart';
-import 'package:medical_dashboard/widgets/image.dart';
-import 'package:medical_dashboard/widgets/search.dart';
 import 'package:medical_dashboard/widgets/sidebar.dart';
-import 'package:medical_dashboard/widgets/topbar_body.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      appBar: AppBar(
+        title: const Text(
+          "My Profile",
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Row(
@@ -50,12 +48,7 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(width: 10),
 
                         //Search
-                        SearchBar(),
-
-                        // Row of Notification + Picture(Avatar) + Name + Dropdown Icon
-                        TopBarBody(),
-
-                        SizedBox(width: 10),
+                        Text("Profile Page")
                       ],
                     )
                   ],

@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:medical_dashboard/widgets/container_links.dart';
-import 'package:medical_dashboard/widgets/image.dart';
-import 'package:medical_dashboard/widgets/search.dart';
 import 'package:medical_dashboard/widgets/sidebar.dart';
-import 'package:medical_dashboard/widgets/topbar_body.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class OverviewScreen extends StatefulWidget {
+  const OverviewScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<OverviewScreen> createState() => _OverviewScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _OverviewScreenState extends State<OverviewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      appBar: AppBar(
+        title: const Text(
+          "Overview",
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Row(
@@ -50,12 +48,7 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(width: 10),
 
                         //Search
-                        SearchBar(),
-
-                        // Row of Notification + Picture(Avatar) + Name + Dropdown Icon
-                        TopBarBody(),
-
-                        SizedBox(width: 10),
+                        Text("Overview")
                       ],
                     )
                   ],
