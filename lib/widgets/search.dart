@@ -17,7 +17,7 @@ class _SearchBarState extends State<SearchBar> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
-          color: Colors.grey[200],
+          color: Colors.grey[300],
         ),
         child: TextField(
           controller: _searchController,

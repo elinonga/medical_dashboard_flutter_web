@@ -15,16 +15,18 @@ class TopBarBody extends StatelessWidget {
             width: 30,
             height: 30,
             decoration: BoxDecoration(
-              color: Colors.grey[300],
+              color: Colors.grey[400],
               shape: BoxShape.circle,
             ),
             child: Stack(
               children: [
-                const Icon(Icons.notifications),
+                const Center(
+                  child: Icon(Icons.notifications),
+                ),
                 // Red dot
                 Positioned(
                   top: 0,
-                  right: 0,
+                  left: 15,
                   child: Container(
                     width: 15,
                     height: 15,
@@ -63,7 +65,7 @@ class TopBarBody extends StatelessWidget {
             'Dr David Mezza',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 12,
+              fontSize: 15,
             ),
           ),
           const SizedBox(width: 3),

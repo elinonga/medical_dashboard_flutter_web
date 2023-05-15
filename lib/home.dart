@@ -22,9 +22,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Color.fromARGB(255, 234, 232, 232),
       body: Padding(
-        padding: const EdgeInsets.all(18.0),
+        padding: const EdgeInsets.only(right: 18.0),
         child: Row(
           children: [
             // Column 1 - Sidebar
@@ -37,14 +37,10 @@ class _HomePageState extends State<HomePage> {
               child: Container(
                 height: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: const BorderRadius.only(
-                    topRight: Radius.circular(16.0),
-                    bottomRight: Radius.circular(16.0),
-                  ),
+                  color: Color.fromARGB(255, 244, 243, 243),
                   border: Border.all(
                     color: Colors.grey,
-                    width: 2.0,
+                    width: 0.5,
                   ),
                 ),
 
@@ -124,8 +120,15 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               flex: 8,
               child: Container(
-                color: Colors.blue,
                 height: double.infinity,
+                color: Color.fromARGB(255, 234, 232, 232),
+                // decoration: BoxDecoration(
+                //   color: Colors.blue,
+                //   border: Border.all(
+                //     color: Colors.grey,
+                //     width: 0.5,
+                //   ),
+                // ),
                 child: ListView.builder(
                     itemCount: 1,
                     itemBuilder: (context, index) {
