@@ -153,8 +153,10 @@ class _HomePageState extends State<HomePage> {
 
                           // A Row of columns
                           Padding(
-                            padding:
-                                const EdgeInsets.only(left: 12.0, right: 12.0),
+                            padding: const EdgeInsets.only(
+                              left: 12.0,
+                              right: 12.0,
+                            ),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -177,39 +179,58 @@ class _HomePageState extends State<HomePage> {
                                       children: [
                                         // Row 1
                                         Padding(
-                                          padding: const EdgeInsets.only(
-                                            left: 12.0,
-                                            right: 12.0,
-                                          ),
+                                          padding: const EdgeInsets.all(15.0),
                                           child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               const Text(
-                                                "Patient History",
+                                                "Incoming Patient History",
                                                 style: TextStyle(
-                                                  fontSize: 18,
+                                                  fontSize: 15,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                               ),
-                                              DropdownButton(
-                                                value: "Monthly",
-                                                items: [
-                                                  "Monthly",
-                                                  "Weekly",
-                                                  "Daily"
-                                                ]
-                                                    .map((item) =>
-                                                        DropdownMenuItem(
-                                                          value: item,
-                                                          child: Text(item),
-                                                        ))
-                                                    .toList(),
-                                                onChanged: (value) {},
+                                              Container(
+                                                height: 30,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white,
+                                                  borderRadius:
+                                                      const BorderRadius.all(
+                                                    Radius.circular(8.0),
+                                                  ),
+                                                  border: Border.all(
+                                                    color: Colors.grey,
+                                                    width: 1.0,
+                                                  ),
+                                                ),
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                    left: 8.0,
+                                                  ),
+                                                  child: DropdownButton(
+                                                    value: "Monthly",
+                                                    items: [
+                                                      "Monthly",
+                                                      "Weekly",
+                                                      "Daily"
+                                                    ]
+                                                        .map((item) =>
+                                                            DropdownMenuItem(
+                                                              value: item,
+                                                              child: Text(item),
+                                                            ))
+                                                        .toList(),
+                                                    onChanged: (value) {},
+                                                  ),
+                                                ),
                                               ),
                                             ],
                                           ),
                                         ),
+
+                                        // Add a divider here
 
                                         // Row 2
                                         Positioned(
