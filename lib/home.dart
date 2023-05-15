@@ -160,7 +160,7 @@ class _HomePageState extends State<HomePage> {
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                // 1st column
+                                // 1st column - Patient's History
                                 Expanded(
                                   flex: 7,
                                   child: Container(
@@ -249,7 +249,7 @@ class _HomePageState extends State<HomePage> {
                                           right: 0,
                                           bottom: 100,
                                           child: Container(
-                                            padding: EdgeInsets.all(16),
+                                            padding: EdgeInsets.all(12.0),
                                             child: Row(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
@@ -309,6 +309,7 @@ class _HomePageState extends State<HomePage> {
                                               mainAxisAlignment:
                                                   MainAxisAlignment.spaceAround,
                                               children: const [
+                                                SizedBox(width: 12),
                                                 Expanded(
                                                   child: Card(
                                                     child: Center(
@@ -317,7 +318,7 @@ class _HomePageState extends State<HomePage> {
                                                     ),
                                                   ),
                                                 ),
-                                                SizedBox(width: 16),
+                                                SizedBox(width: 12),
                                                 Expanded(
                                                   child: Card(
                                                     child: Center(
@@ -326,7 +327,7 @@ class _HomePageState extends State<HomePage> {
                                                     ),
                                                   ),
                                                 ),
-                                                SizedBox(width: 16),
+                                                SizedBox(width: 12),
                                                 Expanded(
                                                   child: Card(
                                                     child: Center(
@@ -334,17 +335,20 @@ class _HomePageState extends State<HomePage> {
                                                     ),
                                                   ),
                                                 ),
+                                                SizedBox(width: 12),
                                               ],
                                             ),
                                           ),
                                         ),
+
+                                        //
                                       ],
                                     ),
                                   ),
                                 ),
                                 const SizedBox(width: 10),
 
-                                // 2nd column
+                                // 2nd column - Profile Card
                                 Expanded(
                                   flex: 3,
                                   child: Container(
@@ -415,9 +419,14 @@ class _HomePageState extends State<HomePage> {
                                     ]),
                                   ),
                                 ),
+
+                                //
                               ],
                             ),
                           ),
+                          SizedBox(
+                            height: 20,
+                          )
 
                           // Another Row
                         ],
