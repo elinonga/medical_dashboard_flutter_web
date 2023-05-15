@@ -230,7 +230,17 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
 
-                                        // Add a divider here
+                                        // Divider
+                                        const Positioned(
+                                          top: 55,
+                                          left: 0,
+                                          right: 0,
+                                          child: Divider(
+                                            height: 1,
+                                            thickness: 0.5,
+                                            color: Colors.grey,
+                                          ),
+                                        ),
 
                                         // Row 2
                                         Positioned(
