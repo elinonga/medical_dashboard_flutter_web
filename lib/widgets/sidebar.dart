@@ -76,7 +76,6 @@ class _CustomSidebarState extends State<CustomSidebar> {
           // Column of Links
           // Overview
           LinksContainer(
-            rangi: Colors.purple[200]!,
             label: 'Overview',
             destination: OverviewScreen(),
             isActive: _activeIndex == 0,
@@ -85,7 +84,6 @@ class _CustomSidebarState extends State<CustomSidebar> {
 
           // Profile
           LinksContainer(
-            rangi: Colors.purple[200]!,
             label: 'Profile',
             destination: ProfileScreen(),
             isActive: _activeIndex == 1,
@@ -94,7 +92,6 @@ class _CustomSidebarState extends State<CustomSidebar> {
 
           //Tasks
           LinksContainer(
-            rangi: Colors.purple[200]!,
             label: 'Tasks',
             destination: TasksScreen(),
             isActive: _activeIndex == 2,
@@ -103,7 +100,6 @@ class _CustomSidebarState extends State<CustomSidebar> {
 
           // Appointment
           LinksContainer(
-            rangi: Colors.purple[200]!,
             label: 'Appointment',
             destination: AppointmentsPage(),
             isActive: _activeIndex == 3,
@@ -112,7 +108,6 @@ class _CustomSidebarState extends State<CustomSidebar> {
 
           // Message
           LinksContainer(
-            rangi: Colors.purple[200]!,
             label: 'Message',
             destination: MessageScreen(),
             isActive: _activeIndex == 4,
@@ -121,7 +116,6 @@ class _CustomSidebarState extends State<CustomSidebar> {
 
           // Contacts
           LinksContainer(
-            rangi: Colors.purple[200]!,
             label: 'Contacts',
             destination: ContactPage(),
             isActive: _activeIndex == 5,

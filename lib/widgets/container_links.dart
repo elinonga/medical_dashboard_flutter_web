@@ -3,14 +3,12 @@ import 'package:flutter/material.dart';
 class LinksContainer extends StatelessWidget {
   const LinksContainer({
     Key? key,
-    required this.rangi,
     required this.label,
     required this.destination,
     required this.icon,
     required this.isActive,
   }) : super(key: key);
 
-  final Color rangi;
   final String label;
   final Widget destination;
   final bool isActive;
@@ -33,14 +31,14 @@ class LinksContainer extends StatelessWidget {
         child: Container(
           height: 40,
           decoration: BoxDecoration(
-            color: isActive ? rangi : Colors.transparent,
+            color: isActive ? Colors.purple : Colors.grey,
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: Row(
             children: [
               const SizedBox(width: 10),
               Icon(
-                icon ?? Icons.home,
+                icon,
                 color: isActive ? Colors.white : Colors.black,
               ),
               const SizedBox(width: 10),
