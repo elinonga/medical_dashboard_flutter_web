@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:medical_dashboard/widgets/circle_container_icon.dart';
 import 'package:medical_dashboard/widgets/containers/section_containers_links.dart';
 import 'package:medical_dashboard/widgets/profile_conatiners.dart';
+import 'package:medical_dashboard/widgets/rows/card_row_graph.dart';
 import 'package:medical_dashboard/widgets/search.dart';
 import 'package:medical_dashboard/widgets/topbar_body.dart';
 
@@ -36,13 +38,6 @@ class _HomePageState extends State<HomePage> {
               child: Container(
                 height: double.infinity,
                 color: Color.fromARGB(255, 234, 232, 232),
-                // decoration: BoxDecoration(
-                //   color: Colors.blue,
-                //   border: Border.all(
-                //     color: Colors.grey,
-                //     width: 0.5,
-                //   ),
-                // ),
                 child: ListView.builder(
                     itemCount: 1,
                     itemBuilder: (context, index) {
@@ -174,29 +169,17 @@ class _HomePageState extends State<HomePage> {
                                                 Expanded(
                                                   child: Column(
                                                     children: const [
-                                                      Expanded(
-                                                        child: Card(
-                                                          child: Center(
-                                                            child:
-                                                                Text("Card 1"),
-                                                          ),
-                                                        ),
+                                                      RowCardGraph(
+                                                        label1: "New Patient",
+                                                        label2: "560",
                                                       ),
-                                                      Expanded(
-                                                        child: Card(
-                                                          child: Center(
-                                                            child:
-                                                                Text("Card 2"),
-                                                          ),
-                                                        ),
+                                                      RowCardGraph(
+                                                        label1: "Inject",
+                                                        label2: "300",
                                                       ),
-                                                      Expanded(
-                                                        child: Card(
-                                                          child: Center(
-                                                            child:
-                                                                Text("Card 3"),
-                                                          ),
-                                                        ),
+                                                      RowCardGraph(
+                                                        label1: "Surgery",
+                                                        label2: "200",
                                                       ),
                                                     ],
                                                   ),
