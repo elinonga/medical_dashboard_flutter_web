@@ -29,30 +29,13 @@ class _HomePageState extends State<HomePage> {
         child: Row(
           children: [
             // Column 1 - Sidebar
-
-            // Expanded to get column sizes
-            Expanded(
+            const Expanded(
               flex: 2, // Give 20% to the sidebar
 
-              // Custom Sidebar with Links
-              child: Container(
-                height: double.infinity,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 244, 243, 243),
-                  borderRadius: const BorderRadius.only(
-                    topRight: Radius.circular(16.0),
-                    bottomRight: Radius.circular(16.0),
-                  ),
-                  border: Border.all(
-                    color: Colors.grey,
-                    width: 0.5,
-                  ),
-                ),
-
-                // Column of Logo + Links
-                child: const LinksContainerSection(currentPage: 'Home'),
-              ),
+              child: LinksContainerSection(
+                  currentPage: 'Home'), // Custom Sidebar with Links
             ),
+
             const SizedBox(width: 10),
 
             // Column 2 - Body

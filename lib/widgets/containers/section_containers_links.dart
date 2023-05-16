@@ -18,68 +18,84 @@ class LinksContainerSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: 20),
-
-        // Logo Image
-        CustomImageContainer(
-          imgUrl: "assets/images/logo.png",
+    return Container(
+      height: double.infinity,
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 244, 243, 243),
+        borderRadius: const BorderRadius.only(
+          topRight: Radius.circular(16.0),
+          bottomRight: Radius.circular(16.0),
         ),
-
-        // CustomLinks
-        SizedBox(height: 25),
-
-        // Overview
-        LinksContainer(
-          label: 'Home',
-          destination: HomePage(),
-          isActive: currentPage == 'Home',
-          icon: Icons.home,
+        border: Border.all(
+          color: Colors.grey,
+          width: 0.5,
         ),
+      ),
 
-        // Profile
-        LinksContainer(
-          label: 'Profile',
-          destination: ProfileScreen(),
-          isActive: currentPage == 'Profile',
-          icon: Icons.person,
-        ),
+      // Column of Logo + Links
+      child: Column(
+        children: [
+          SizedBox(height: 20),
 
-        // Tasks
-        LinksContainer(
-          label: 'Tasks',
-          destination: TasksScreen(),
-          isActive: currentPage == 'Tasks',
-          icon: Icons.check_circle,
-        ),
+          // Logo Image
+          CustomImageContainer(
+            imgUrl: "assets/images/logo.png",
+          ),
 
-        // Appointments
-        LinksContainer(
-          label: 'Appointments',
-          destination: AppointmentsPage(),
-          isActive: currentPage == 'Appointments',
-          icon: Icons.event_available,
-        ),
+          // CustomLinks
+          SizedBox(height: 25),
 
-        // Message
-        LinksContainer(
-          label: 'Messages',
-          destination: MessageScreen(),
-          isActive: currentPage == 'Messages',
-          icon: Icons.message,
-        ),
+          // Overview
+          LinksContainer(
+            label: 'Home',
+            destination: HomePage(),
+            isActive: currentPage == 'Home',
+            icon: Icons.home,
+          ),
 
-        // Contacts
-        LinksContainer(
-          label: 'Contacts',
-          destination: ContactPage(),
-          isActive: currentPage == 'Contacts',
-          icon: Icons.contacts,
-        ),
+          // Profile
+          LinksContainer(
+            label: 'Profile',
+            destination: ProfileScreen(),
+            isActive: currentPage == 'Profile',
+            icon: Icons.person,
+          ),
 
-        SizedBox(height: 10),
-      ],
+          // Tasks
+          LinksContainer(
+            label: 'Tasks',
+            destination: TasksScreen(),
+            isActive: currentPage == 'Tasks',
+            icon: Icons.check_circle,
+          ),
+
+          // Appointments
+          LinksContainer(
+            label: 'Appointments',
+            destination: AppointmentsPage(),
+            isActive: currentPage == 'Appointments',
+            icon: Icons.event_available,
+          ),
+
+          // Message
+          LinksContainer(
+            label: 'Messages',
+            destination: MessageScreen(),
+            isActive: currentPage == 'Messages',
+            icon: Icons.message,
+          ),
+
+          // Contacts
+          LinksContainer(
+            label: 'Contacts',
+            destination: ContactPage(),
+            isActive: currentPage == 'Contacts',
+            icon: Icons.contacts,
+          ),
+
+          SizedBox(height: 10),
+        ],
+      ),
     );
   }
 }

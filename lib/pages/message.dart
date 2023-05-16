@@ -19,35 +19,17 @@ class _MessageScreenState extends State<MessageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Color.fromARGB(255, 234, 232, 232),
       body: Padding(
-        padding: const EdgeInsets.all(18.0),
+        padding: const EdgeInsets.only(right: 18.0),
         child: Row(
           children: [
             // Column 1 - Sidebar
-
-            // Expanded to get column sizes
-            Expanded(
+            const Expanded(
               flex: 2, // Give 20% to the sidebar
 
-              // Custom Sidebar with Links
-              child: Container(
-                height: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: const BorderRadius.only(
-                    topRight: Radius.circular(16.0),
-                    bottomRight: Radius.circular(16.0),
-                  ),
-                  border: Border.all(
-                    color: Colors.grey,
-                    width: 2.0,
-                  ),
-                ),
-
-                // Column of Logo + Links
-                child: const LinksContainerSection(currentPage: 'Messages'),
-              ),
+              child: LinksContainerSection(
+                  currentPage: 'Messages'), // Custom Sidebar with Links
             ),
             const SizedBox(width: 10),
 
