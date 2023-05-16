@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medical_dashboard/pages/appointment.dart';
-import 'package:medical_dashboard/pages/contact.dart';
-import 'package:medical_dashboard/pages/message.dart';
-import 'package:medical_dashboard/pages/profile.dart';
-import 'package:medical_dashboard/pages/tasks.dart';
-import 'package:medical_dashboard/widgets/circle_container_icon.dart';
-import 'package:medical_dashboard/widgets/containers/container_links.dart';
 import 'package:medical_dashboard/widgets/containers/section_containers_links.dart';
-import 'package:medical_dashboard/widgets/image.dart';
 import 'package:medical_dashboard/widgets/profile_conatiners.dart';
 import 'package:medical_dashboard/widgets/search.dart';
 import 'package:medical_dashboard/widgets/topbar_body.dart';

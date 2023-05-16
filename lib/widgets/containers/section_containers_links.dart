@@ -21,7 +21,7 @@ class LinksContainerSection extends StatelessWidget {
     return Container(
       height: double.infinity,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 244, 243, 243),
+        color: const Color.fromARGB(255, 244, 243, 243),
         borderRadius: const BorderRadius.only(
           topRight: Radius.circular(16.0),
           bottomRight: Radius.circular(16.0),
@@ -35,20 +35,20 @@ class LinksContainerSection extends StatelessWidget {
       // Column of Logo + Links
       child: Column(
         children: [
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
 
           // Logo Image
-          CustomImageContainer(
+          const CustomImageContainer(
             imgUrl: "assets/images/logo.png",
           ),
 
           // CustomLinks
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
 
           // Overview
           LinksContainer(
             label: 'Home',
-            destination: HomePage(),
+            destination: const HomePage(),
             isActive: currentPage == 'Home',
             icon: Icons.home,
           ),
@@ -56,7 +56,7 @@ class LinksContainerSection extends StatelessWidget {
           // Profile
           LinksContainer(
             label: 'Profile',
-            destination: ProfileScreen(),
+            destination: const ProfileScreen(),
             isActive: currentPage == 'Profile',
             icon: Icons.person,
           ),
@@ -64,7 +64,7 @@ class LinksContainerSection extends StatelessWidget {
           // Tasks
           LinksContainer(
             label: 'Tasks',
-            destination: TasksScreen(),
+            destination: const TasksScreen(),
             isActive: currentPage == 'Tasks',
             icon: Icons.check_circle,
           ),
@@ -72,7 +72,7 @@ class LinksContainerSection extends StatelessWidget {
           // Appointments
           LinksContainer(
             label: 'Appointments',
-            destination: AppointmentsPage(),
+            destination: const AppointmentsPage(),
             isActive: currentPage == 'Appointments',
             icon: Icons.event_available,
           ),
@@ -80,7 +80,7 @@ class LinksContainerSection extends StatelessWidget {
           // Message
           LinksContainer(
             label: 'Messages',
-            destination: MessageScreen(),
+            destination: const MessageScreen(),
             isActive: currentPage == 'Messages',
             icon: Icons.message,
           ),
@@ -88,12 +88,12 @@ class LinksContainerSection extends StatelessWidget {
           // Contacts
           LinksContainer(
             label: 'Contacts',
-            destination: ContactPage(),
+            destination: const ContactPage(),
             isActive: currentPage == 'Contacts',
             icon: Icons.contacts,
           ),
 
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
         ],
       ),
     );

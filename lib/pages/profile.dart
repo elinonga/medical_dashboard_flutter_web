@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medical_dashboard/home.dart';
-import 'package:medical_dashboard/pages/appointment.dart';
-import 'package:medical_dashboard/pages/contact.dart';
-import 'package:medical_dashboard/pages/message.dart';
-import 'package:medical_dashboard/pages/tasks.dart';
-import 'package:medical_dashboard/widgets/containers/container_links.dart';
 import 'package:medical_dashboard/widgets/containers/section_containers_links.dart';
-import 'package:medical_dashboard/widgets/image.dart';
-import 'package:medical_dashboard/widgets/sidebar.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);

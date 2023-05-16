@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medical_dashboard/home.dart';
-import 'package:medical_dashboard/pages/appointment.dart';
-import 'package:medical_dashboard/pages/contact.dart';
-import 'package:medical_dashboard/pages/profile.dart';
-import 'package:medical_dashboard/pages/tasks.dart';
-import 'package:medical_dashboard/widgets/containers/container_links.dart';
 import 'package:medical_dashboard/widgets/containers/section_containers_links.dart';
-import 'package:medical_dashboard/widgets/image.dart';
 
 class MessageScreen extends StatefulWidget {
   const MessageScreen({Key? key}) : super(key: key);

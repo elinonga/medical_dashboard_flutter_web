@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:medical_dashboard/home.dart';
-import 'package:medical_dashboard/pages/appointment.dart';
-import 'package:medical_dashboard/pages/contact.dart';
-import 'package:medical_dashboard/pages/message.dart';
-import 'package:medical_dashboard/pages/profile.dart';
-import 'package:medical_dashboard/widgets/containers/container_links.dart';
+
 import 'package:medical_dashboard/widgets/containers/section_containers_links.dart';
-import 'package:medical_dashboard/widgets/image.dart';
 
 class TasksScreen extends StatefulWidget {
   const TasksScreen({Key? key}) : super(key: key);
