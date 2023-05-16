@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medical_dashboard/widgets/circle_container_icon.dart';
+import 'package:medical_dashboard/widgets/charts/chart.dart';
 import 'package:medical_dashboard/widgets/containers/section_containers_links.dart';
 import 'package:medical_dashboard/widgets/profile_conatiners.dart';
 import 'package:medical_dashboard/widgets/rows/card_row_graph.dart';
@@ -48,12 +48,12 @@ class _HomePageState extends State<HomePage> {
                           ),
 
                           // Row (SearchBar + Row of Profile)
-                          Row(
-                            children: const [
+                          const Row(
+                            children: [
                               SizedBox(width: 10),
 
                               //Search
-                              SearchBar(),
+                              CustomSearchBar(),
 
                               // Row of Notification + Picture(Avatar) + Name + Dropdown Icon
                               TopBarBody(),
@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                                 Expanded(
                                   flex: 7,
                                   child: Container(
-                                    height: 500,
+                                    height: 430,
                                     decoration: BoxDecoration(
                                       color: Colors.pink,
                                       borderRadius: const BorderRadius.all(
@@ -154,12 +154,11 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
 
-                                        // Row 2
+                                        // Row 2 - Graph
                                         Positioned(
                                           top: 50,
                                           left: 0,
                                           right: 0,
-                                          bottom: 100,
                                           child: Container(
                                             padding: EdgeInsets.all(12.0),
                                             child: Row(
@@ -185,12 +184,27 @@ class _HomePageState extends State<HomePage> {
                                                   ),
                                                 ),
                                                 const SizedBox(width: 10),
-                                                const Expanded(
-                                                  child: Card(
-                                                    child: Center(
-                                                      child: Text(
-                                                          "Card with graph"),
+                                                Expanded(
+                                                  child: Container(
+                                                    height: 235,
+                                                    decoration: BoxDecoration(
+                                                      color:
+                                                          const Color.fromARGB(
+                                                              255,
+                                                              244,
+                                                              243,
+                                                              243),
+                                                      borderRadius:
+                                                          const BorderRadius
+                                                              .all(
+                                                        Radius.circular(16.0),
+                                                      ),
+                                                      border: Border.all(
+                                                        color: Colors.grey,
+                                                        width: 2.0,
+                                                      ),
                                                     ),
+                                                    child: CustomChats(),
                                                   ),
                                                 ),
                                               ],
@@ -202,7 +216,7 @@ class _HomePageState extends State<HomePage> {
                                         Positioned(
                                           left: 0,
                                           right: 0,
-                                          bottom: 0,
+                                          bottom: 10,
                                           child: Container(
                                             height: 100,
                                             child: Row(
