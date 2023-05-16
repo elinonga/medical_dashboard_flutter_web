@@ -20,6 +20,7 @@ class LinksContainer extends StatelessWidget {
       padding: const EdgeInsets.only(
         left: 18.0,
         right: 18.0,
+        bottom: 15.0,
       ),
       child: InkWell(
         onTap: () {
@@ -31,7 +32,7 @@ class LinksContainer extends StatelessWidget {
         child: Container(
           height: 40,
           decoration: BoxDecoration(
-            color: isActive ? Colors.purple : Colors.grey,
+            color: isActive ? Colors.purple : Colors.grey[200],
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: Row(

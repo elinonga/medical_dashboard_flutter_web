@@ -4,7 +4,8 @@ import 'package:medical_dashboard/pages/appointment.dart';
 import 'package:medical_dashboard/pages/contact.dart';
 import 'package:medical_dashboard/pages/profile.dart';
 import 'package:medical_dashboard/pages/tasks.dart';
-import 'package:medical_dashboard/widgets/container_links.dart';
+import 'package:medical_dashboard/widgets/containers/container_links.dart';
+import 'package:medical_dashboard/widgets/containers/section_containers_links.dart';
 import 'package:medical_dashboard/widgets/image.dart';
 
 class MessageScreen extends StatefulWidget {
@@ -45,73 +46,7 @@ class _MessageScreenState extends State<MessageScreen> {
                 ),
 
                 // Column of Logo + Links
-                child: Column(
-                  children: const [
-                    SizedBox(height: 10),
-
-                    // Logo Image
-                    CustomImageContainer(
-                      imgUrl: "assets/images/logo.png",
-                    ),
-
-                    // CustomLinks
-                    SizedBox(height: 10),
-
-                    // Overview
-                    LinksContainer(
-                      label: 'Home',
-                      destination: HomePage(),
-                      isActive: false,
-                      icon: Icons.home,
-                    ),
-                    SizedBox(height: 10),
-
-                    // Profile
-                    LinksContainer(
-                      label: 'Profile',
-                      destination: ProfileScreen(),
-                      isActive: false,
-                      icon: Icons.person,
-                    ),
-                    SizedBox(height: 10),
-
-                    // Tasks
-                    LinksContainer(
-                      label: 'Tasks',
-                      destination: TasksScreen(),
-                      isActive: false,
-                      icon: Icons.check_circle,
-                    ),
-                    SizedBox(height: 10),
-
-                    // Appointments
-                    LinksContainer(
-                      label: 'Appointments',
-                      destination: AppointmentsPage(),
-                      isActive: false,
-                      icon: Icons.event_available,
-                    ),
-                    SizedBox(height: 10),
-
-                    // Message
-                    LinksContainer(
-                      label: 'Messages',
-                      destination: MessageScreen(),
-                      isActive: true,
-                      icon: Icons.message,
-                    ),
-                    SizedBox(height: 10),
-
-                    // Contacts
-                    LinksContainer(
-                      label: 'Contacts',
-                      destination: ContactPage(),
-                      isActive: false,
-                      icon: Icons.contacts,
-                    ),
-                    SizedBox(height: 10),
-                  ],
-                ),
+                child: const LinksContainerSection(currentPage: 'Messages'),
               ),
             ),
             const SizedBox(width: 10),

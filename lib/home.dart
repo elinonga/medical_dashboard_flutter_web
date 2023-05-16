@@ -5,7 +5,8 @@ import 'package:medical_dashboard/pages/message.dart';
 import 'package:medical_dashboard/pages/profile.dart';
 import 'package:medical_dashboard/pages/tasks.dart';
 import 'package:medical_dashboard/widgets/circle_container_icon.dart';
-import 'package:medical_dashboard/widgets/container_links.dart';
+import 'package:medical_dashboard/widgets/containers/container_links.dart';
+import 'package:medical_dashboard/widgets/containers/section_containers_links.dart';
 import 'package:medical_dashboard/widgets/image.dart';
 import 'package:medical_dashboard/widgets/profile_conatiners.dart';
 import 'package:medical_dashboard/widgets/search.dart';
@@ -38,6 +39,10 @@ class _HomePageState extends State<HomePage> {
                 height: double.infinity,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 244, 243, 243),
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(16.0),
+                    bottomRight: Radius.circular(16.0),
+                  ),
                   border: Border.all(
                     color: Colors.grey,
                     width: 0.5,
@@ -45,73 +50,7 @@ class _HomePageState extends State<HomePage> {
                 ),
 
                 // Column of Logo + Links
-                child: Column(
-                  children: const [
-                    SizedBox(height: 10),
-
-                    // Logo Image
-                    CustomImageContainer(
-                      imgUrl: "assets/images/logo.png",
-                    ),
-
-                    // CustomLinks
-                    SizedBox(height: 10),
-
-                    // Overview
-                    LinksContainer(
-                      label: 'Home',
-                      destination: HomePage(),
-                      isActive: true,
-                      icon: Icons.home,
-                    ),
-                    SizedBox(height: 10),
-
-                    // Profile
-                    LinksContainer(
-                      label: 'Profile',
-                      destination: ProfileScreen(),
-                      isActive: false,
-                      icon: Icons.person,
-                    ),
-                    SizedBox(height: 10),
-
-                    // Tasks
-                    LinksContainer(
-                      label: 'Tasks',
-                      destination: TasksScreen(),
-                      isActive: false,
-                      icon: Icons.check_circle,
-                    ),
-                    SizedBox(height: 10),
-
-                    // Appointments
-                    LinksContainer(
-                      label: 'Appointments',
-                      destination: AppointmentsPage(),
-                      isActive: false,
-                      icon: Icons.event_available,
-                    ),
-                    SizedBox(height: 10),
-
-                    // Message
-                    LinksContainer(
-                      label: 'Messages',
-                      destination: MessageScreen(),
-                      isActive: false,
-                      icon: Icons.message,
-                    ),
-                    SizedBox(height: 10),
-
-                    // Contacts
-                    LinksContainer(
-                      label: 'Contacts',
-                      destination: ContactPage(),
-                      isActive: false,
-                      icon: Icons.contacts,
-                    ),
-                    SizedBox(height: 10),
-                  ],
-                ),
+                child: const LinksContainerSection(currentPage: 'Home'),
               ),
             ),
             const SizedBox(width: 10),
