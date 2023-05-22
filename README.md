@@ -2,8 +2,6 @@
 
 This is a flutter web app that serves as a medical dashboard page, designed to help healthcare professionals and institutions track important medical information and manage patient records.
 
-!![Screenshot](assets/images/readme/inspo.jpeg)
-
 ## Features
 
 - The app includes various components such as graphs, charts, and tables that display information such as patient records, medical history, and vital signs.
@@ -17,6 +15,10 @@ This is a flutter web app that serves as a medical dashboard page, designed to h
 2. Navigate to the project directory
 3. Run `flutter packages get` to install the necessary packages
 4. Run `flutter run -d chrome` to launch the app on the Chrome browser
+
+Here's the screenshot:
+
+!![Screenshot](assets/images/readme/inspo.jpeg)
 
 ## Credits
 
